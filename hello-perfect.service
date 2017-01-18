@@ -1,0 +1,12 @@
+[Unit]
+Description=Perfect deployed hello-perfect
+
+[Service]
+Type=simple
+WorkingDirectory=/perfect-deployed/hello-perfect
+ExecStart=/perfect-deployed/hello-perfect/hello-perfect
+Restart=always
+PIDFile=/var/run/hello-perfect.pid
+
+[Install]
+WantedBy=multi-user.target
